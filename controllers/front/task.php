@@ -26,6 +26,9 @@ class MultipurposeTaskModuleFrontController extends ModuleFrontController
 	public function setMedia()
 	{
 		parent::setMedia();
+		Media::addJsDef(array(
+			'mf_ajax' => _PS_MODULE_DIR_.'moonfriend/ajax.php'
+		));
 		$this->addJquery();
 
 		$this->addJS(_PS_MODULE_DIR_.'/multipurpose/views/js/jquery.dataTables.js');
